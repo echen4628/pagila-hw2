@@ -11,3 +11,4 @@
  * For this problem, you should use the NOT IN clause;
  * in problem 05b you will use the LEFT JOIN clause.
  */
+ SELECT last_name, first_name FROM actor where first_name || ' ' || last_name not in (SELECT first_name || ' ' || last_name from customer) ORDER BY last_name, first_name;
